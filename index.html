@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Punica Skills Center</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-hNsxkrQ+T1u1afzv7VxOZKysO+NtXbKe3l4gCIZWXKp7m9ov1g3b9T3nQ9Yb8AfB+Ew5g2zFJZ5B+Zf4q5upzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+       
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-content">
+                        
+                        <div class="logo">
+                            <a href="#">
+                                <img src="/src/img/Logo_PSC-removebg-preview.png" alt="PSC Logo" />
+                            </a>
+                        </div>
+                       
+                            
+                       
+                        
+                        
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0"></h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <style>
+            
+            .top-bar {
+                width: 100%;
+                height: 85px; 
+                background-color: rgb(255, 255, 255);
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                border-bottom: 2px solid #ddd;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 0;
+            }
+        
+            .top-bar-content {
+                width: 100%;
+                max-width: 1200px; 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+        
+       
+            .contact-info {
+                font-size: 20px;
+                color: #333;
+                font-weight: bold;
+            }
+        
+           
+            .logo img {
+                max-height: 110px;
+                width: auto;
+            }
+        
+           
+            .site-header {
+                background-color: #5f0739;
+                padding: 100px 0 15px;
+                position: relative;
+            }
+        
+            .signup-btn {
+                background-color: #5f0739 !important;
+                color: #FFF !important;
+                border-radius: 5px;
+                padding: 8px 12px;
+                text-decoration: none;
+                border: none;
+            }
+        
+            .signup-btn:hover {
+                background-color: #720948 !important;
+            }
+
+        
+            @media (max-width: 768px) {
+                .top-bar {
+                    height: 70px;
+                    padding: 5px 0;
+                }
+        
+                .top-bar-content {
+                    flex-direction: column; 
+                    text-align: center;
+                }
+        
+                .contact-info {
+                    margin-bottom: 5px;
+                    font-size: 12px;
+                }
+        
+                .logo img {
+                    max-height: 50px;
+                }
+            }
+        </style>
+        
+        
+        
+        
+
+        <main>
+            <section class="hero text-light text-center" style="margin-bottom: 140px;">
+                <div class="container-sm">
+                  <div class="hero-inner">
+                    <h1 class="hero-title h2-mobile mt-0 is-revealing">Punica Skills Center</h1>
+                    <p class="hero-paragraph is-revealing">Center de Formation Professionnelle.</p>
+                    <p class="hero-cta is-revealing">
+                      <a class="button button-secondary button-shadow" href="#">Contactez-nous</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+              
+            
+              <div id="contactModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Informations de contact</h2>
+                  <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
+                      <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                    </svg>
+                    Email:
+                    <a href="mailto:info@example.com">info@example.com</a>
+                  </p>
+                  <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;">
+                      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.27 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.27 1z"></path>
+                    </svg>
+                    Téléphone:
+                    <a href="tel:+1234567890">+1 234 567 890</a>
+                  </p>
+                  <div class="modal-icons">
+                  
+                    <a href="https://www.facebook.com/ecfjaziri" target="_blank" aria-label="Facebook">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+                      </svg>
+                    </a>
+               
+                    <a href="https://www.instagram.com/punica_skills_center/" target="_blank" aria-label="Instagram">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                      </svg>
+                    </a>
+                 
+                    <a href="https://www.linkedin.com/company/punicaskillscenter/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.036-1.851-3.036-1.853 0-2.137 1.445-2.137 2.939v5.666H9.353V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.369-1.85 3.602 0 4.267 2.368 4.267 5.455v6.286zM5.337 7.433a2.065 2.065 0 1 1 0-4.13 2.065 2.065 0 0 1 0 4.13zM6.924 20.452H3.75V9h3.174v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.225.792 24 1.771 24h20.451C23.206 24 24 23.225 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <style>
+              
+                .modal {
+                  display: none;
+                  position: fixed;
+                  z-index: 1000;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  background: rgba(0, 0, 0, 0.7);
+                  animation: fadeIn 0.3s ease-in-out;
+                }
+                @keyframes fadeIn {
+                  from { opacity: 0; }
+                  to { opacity: 1; }
+                }
+              
+                .modal-content {
+                  background: #fff;
+                  margin: 10% auto;
+                  padding: 30px;
+                  border-radius: 12px;
+                  width: 90%;
+                  max-width: 500px;
+                  position: relative;
+                  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                  animation: slideDown 0.4s ease-in-out;
+                }
+                @keyframes slideDown {
+                  from { transform: translateY(-20px); opacity: 0; }
+                  to { transform: translateY(0); opacity: 1; }
+                }
+                .modal-content h2 {
+                  margin-top: 0;
+                  font-size: 1.8rem;
+                  color: #2d1a47;
+                }
+                .modal-content p {
+                  margin: 15px 0;
+                  font-size: 1.1rem;
+                  color: #2d1a47;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                .modal-content p svg {
+                  margin-right: 10px;
+                }
+                .modal-icons {
+                  margin-top: 20px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 20px;
+                }
+                .modal-icons a {
+                  width: 32px;
+                  height: 32px;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: transform 0.2s, fill 0.2s;
+                  fill: #2d1a47;
+                }
+                .modal-icons a:hover {
+                  transform: scale(1.1);
+                  fill: #2d1a47;
+                }
+                .close {
+                  color: #999;
+                  position: absolute;
+                  right: 15px;
+                  top: 15px;
+                  font-size: 28px;
+                  font-weight: 600;
+                  cursor: pointer;
+                  transition: color 0.2s;
+                }
+                .close:hover,
+                .close:focus {
+                  color: #333;
+                }
+              </style>
+              
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+               
+                  var contactLink = document.querySelector("a.button.button-secondary.button-shadow");
+                  var modal = document.getElementById("contactModal");
+                  var closeBtn = modal.querySelector(".close");
+              
+      
+                  contactLink.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    modal.style.display = "block";
+                  });
+              
+                  closeBtn.addEventListener("click", function() {
+                    modal.style.display = "none";
+                  });
+    
+                  window.addEventListener("click", function(event) {
+                    if (event.target === modal) {
+                      modal.style.display = "none";
+                    }
+                  });
+                });
+              </script>
+              
+            
+            <section class="about section text-center" style="margin-top: 120px;">
+                <div class="container">
+                        <div class="feature-extended">
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">À propos de nous</h3>
+                                <p style="color: #333;">     
+                                    Nous sommes un centre de formation spécialisé dans les logiciels dédiés à l'ingénierie, l'architecture et l'énergie solaire. 
+                                    Notre mission est d'accompagner les professionnels et les passionnés dans l'acquisition des compétences essentielles pour exceller dans leurs domaines. 
+                                    Grâce à nos cours pratiques et nos formateurs expérimentés, vous apprendrez à maîtriser des outils tels que PVSyst, SketchUp et AutoCAD.
+                                </p>
+                            </div>
+                            <div class="feature-extended-image is-revealing">
+                                <img src="/src/img/centre-formation-1024x683.jpg" alt="Certification Officielle" width="480" height="360" style=" border-radius:20px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+                                
+                    <section class="features section text-center">
+                        <div class="container">
+                            <div class="features-inner section-inner has-top-divider">
+                                <h2 class="section-title mt-0">Cours</h2>
+                                <div class="features-wrap">
+                                    <div class="feature is-revealing">
+                                        <div class="feature-inner">
+                                            <div class="feature-icon">
+                                                <img src="/src/img/pvsystImage.png" alt="PVSyst" width="60" height="60">
+                                            </div>
+                                            <h4 class="feature-title h3-mobile">PVSyst</h4>
+                                            <p class="text-sm">Un logiciel complet conçu pour l'analyse des systèmes photovoltaïques, permettant de modéliser, simuler et optimiser les projets d’énergie solaire.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature is-revealing">
+                                        <div class="feature-inner">
+                                            <div class="feature-icon">
+                                                <img src="/src/img/sketchupImage.png" alt="SketchUp" width="60" height="60">
+                                            </div>
+                                            <h4 class="feature-title h3-mobile">SketchUp</h4>
+                                            <p class="text-sm">Un puissant outil de modélisation 3D utilisé en architecture, design d’intérieur et ingénierie, connu pour son interface intuitive et sa polyvalence.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature is-revealing">
+                                        <div class="feature-inner">
+                                            <div class="feature-icon">
+                                                <img src="/src/img/Autocad-Logo.png" alt="AutoCAD" width="60" height="60">
+                                            </div>
+                                            <h4 class="feature-title h3-mobile">AutoCAD</h4>
+                                            <p class="text-sm">Un logiciel de référence pour la conception et le dessin en 2D et 3D, largement utilisé en ingénierie, architecture et construction pour des dessins techniques précis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+            <style>
+               .features-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap:20px; 
+                }
+
+                .feature {
+                    flex: 1 1 300px; 
+                    max-width: 300px;
+                    text-align: center;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .feature:hover {
+                    transform: scale(1.15); 
+                }
+
+            </style>
+            
+
+            <section class="features-extended section">
+                <div class="container">
+                  <div class="features-extended-inner section-inner has-top-divider">
+                    <div class="features-extended-header text-center">
+                      <div class="container-sm">
+                        <h2 class="section-title mt-0">Pourquoi rejoindre Punica Skills Center</h2>
+                        <p class="section-paragraph">
+                          Chez Punica Skills Center, nous offrons une formation professionnelle innovante alliant théorie et pratique pour vous préparer efficacement au monde du travail. Nos programmes, conçus par des experts reconnus, vous permettent d’acquérir des compétences techniques et de développer un esprit critique pour réussir dans un marché compétitif.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="feature-extended">
+                      <div class="feature-extended-image is-revealing">
+                        <img src="/src/img/istockphoto-1588288383-612x612.jpg" alt="Apprentissage Pratique" width="480" height="360" style="border-radius:50px;">
+                      </div>
+                      <div class="feature-extended-body">
+                        <h3 class="mt-0">Apprentissage Pratique</h3>
+                        <p>Acquérez une expérience concrète avec des projets réels</p>
+                      </div>
+                    </div>
+                    <div class="feature-extended">
+                      <div class="feature-extended-image is-revealing">
+                        <img src="/src/img/pngtree-male-teacher-in-blue-suit-holding-tab-png-image_12504511-removebg-preview.png" alt="Perspectives du Secteur" width="480" height="360" style="border-radius:50px;">
+                      </div>
+                      <div class="feature-extended-body">
+                        <h3 class="mt-0">Perspectives du Secteur</h3>
+                        <p>Bénéficiez des conseils d'experts de l'industrie</p>
+                      </div>
+                    </div>
+                    <div class="feature-extended">
+                      <div class="feature-extended-image is-revealing">
+                        <img src="/src/img/cert.PNG" alt="Certification Officielle" width="480" height="360" style="border-radius: 50px;">
+                      </div>
+                      <div class="feature-extended-body">
+                        <h3 class="mt-0">Certification Officielle</h3>
+                        <p>Obtenez un certificat pour renforcer votre CV</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+            
+            
+           
+        <section class="map-location section text-center" style="margin-top: 120px; background-color: #f8f9fa; padding: 40px 0;">
+            <div class="container">
+                <h2 class="section-title mt-0">Trouvez-nous ici</h2>
+                <p class="section-paragraph">Notre centre de formation est situé à l'adresse suivante :</p>
+                
+               
+                <div class="map-container" style="width: 90%; max-width: 900px; height: 450px; margin: 20px auto; border-radius: 15px; overflow: hidden; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); border: 5px solid #2d1a47;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1650764.8348023887!2d9.846729984374981!3d36.08982968851249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2b568160f0df5%3A0xa0d7af22d09fb6ab!2sSoukra%20Park!5e0!3m2!1sfr!2stn!4v1743354657538!5m2!1sfr!2stn" width="100%" height="100%" style="border: none; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="pricing-inner section-inner has-top-divider">
+        </section>
+        
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.facebook.com/ecfjaziri" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"
+                                        fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/punica_skills_center/" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">Instagram</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5zm5-2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 1 .75-.75z"
+                                        fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/punicaskillscenter/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">LinkedIn</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.4 0C1.1 0 0 1.1 0 2.4v11.2C0 14.9 1.1 16 2.4 16h11.2c1.3 0 2.4-1.1 2.4-2.4V2.4C16 1.1 14.9 0 13.6 0H2.4zM4.8 13H2.4V6h2.4v7zM3.6 5.2c-.8 0-1.2-.5-1.2-1.2 0-.7.5-1.2 1.2-1.2.7 0 1.2.5 1.2 1.2 0 .7-.5 1.2-1.2 1.2zM13 13h-2.4V9.5c0-.9-.3-1.5-1.2-1.5-.6 0-1.1.4-1.3.9-.1.2-.1.4-.1.7V13H5.5V6h2.4v1.1c.4-.5 1-.8 1.8-.8 1.3 0 2.3 1 2.3 3.1V13z"
+                                        fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+            <style>
+                .site-footer {
+                    background-color: #66033c;
+                }
+            </style>
+        </footer>
+        
+      
+        
+        
+    </div>
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
