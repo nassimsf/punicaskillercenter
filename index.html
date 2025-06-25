@@ -50,10 +50,14 @@
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Tunis",
-    "addressCountry": "TN"
+    "addressCountry": {
+      "@type": "Country",
+      "name": "Tunisia"
+    }
   }
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,11 +78,12 @@
   },
   "hasCourseInstance": {
     "@type": "CourseInstance",
-    "courseMode": "https://schema.org/Mixed",
+    "courseMode": "mixed",
     "courseSchedule": {
       "@type": "Schedule",
       "startDate": "2024-07-15",
       "endDate": "2024-07-19",
+      "repeatFrequency": "https://schema.org/OneTime",  <!-- Or Weekly, Daily depending on reality -->
       "repeatCount": 1
     },
     "location": {
@@ -87,12 +92,16 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tunis",
-        "addressCountry": "TN"
+        "addressCountry": {
+          "@type": "Country",
+          "name": "Tunisia"
+        }
       }
     }
   }
 }
 </script>
+
 />
 </head>
 <body class="is-boxed has-animations">
