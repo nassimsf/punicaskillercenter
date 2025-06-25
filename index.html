@@ -57,6 +57,25 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://www.punicaskillscenter.com#organization",
+  "name": "Punica Skills Center",
+  "description": "Centre de Formation Professionnelle en ingénierie et architecture en Tunisie",
+  "url": "https://www.punicaskillscenter.com",
+  "logo": "https://www.punicaskillscenter.com/img/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tunis",
+    "addressCountry": {
+      "@type": "Country",
+      "name": "Tunisia"
+    }
+  }
+}
+</script>
 
 <script type="application/ld+json">
 {
@@ -65,9 +84,7 @@
   "name": "Formation Professionnelle PVSyst",
   "description": "Maîtrisez la modélisation de systèmes photovoltaïques avec certification reconnue en Tunisie.",
   "provider": {
-    "@type": "EducationalOrganization",
-    "name": "Punica Skills Center",
-    "url": "https://www.punicaskillscenter.com"
+    "@id": "https://www.punicaskillscenter.com#organization"
   },
   "offers": {
     "@type": "Offer",
@@ -83,7 +100,7 @@
       "@type": "Schedule",
       "startDate": "2024-07-15",
       "endDate": "2024-07-19",
-      "repeatFrequency": "https://schema.org/OneTime",  <!-- Or Weekly, Daily depending on reality -->
+      "repeatFrequency": "https://schema.org/OneTime",
       "repeatCount": 1
     },
     "location": {
@@ -101,6 +118,7 @@
   }
 }
 </script>
+
 
 />
 </head>
