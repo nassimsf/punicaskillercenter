@@ -59,42 +59,50 @@
   }
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "Formation Professionnelle PVSyst",
-  "description": "Maîtrisez la modélisation de systèmes photovoltaïques avec certification reconnue en Tunisie.",
-  "provider": {
-    "@id": "https://www.punicaskillscenter.com/#organization"
+  "@type": "EducationalOrganization",
+  "name": "Punica Skills Center",
+  "description": "Centre de Formation Professionnelle en ingénierie et architecture en Tunisie",
+  "url": "https://www.punicaskillscenter.com",
+  "logo": "https://www.punicaskillscenter.com/img/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tunis",
+    "addressCountry": "TN"
   },
-  "offers": {
-    "@type": "Offer",
-    "price": "1200",
-    "priceCurrency": "TND",
-    "category": "ProfessionalEducation",
-    "availability": "https://schema.org/InStock"
-  },
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": "blended",
-    "courseWorkload": "40 hours",
-    "startDate": "2024-07-15",
-    "endDate": "2024-07-19",
-    "location": {
-      "@type": "Place",
-      "name": "Punica Skills Center",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tunis",
-        "addressCountry": {
-          "@type": "Country",
-          "name": "Tunisia"
-        }
+  "makesOffer": [
+    {
+      "@type": "Course",
+      "name": "Formation PVSyst",
+      "description": "Maîtrisez la modélisation de systèmes photovoltaïques",
+      "image": "https://punicaskillercenter.vercel.app/img/istockphoto-1588288383-612x612.jpg",
+      "knowsAbout": "Ingénierie énergétique",
+      "educationalCredentialAwarded": "Certificat PVSyst"
+    },
+    {
+      "@type": "Course",
+      "name": "Formation SketchUp",
+      "description": "Modélisation 3D pour l'architecture",
+      "image": "https://punicaskillercenter.vercel.app/img/pngtree-male-teacher-in-blue-suit-holding-tab-png-image_12504511-removebg-preview.png",
+      "knowsAbout": "Modélisation architecturale",
+      "employee": {
+        "@type": "Person",
+        "name": "Expert en architecture"
+      }
+    },
+    {
+      "@type": "Course",
+      "name": "Formation AutoCAD",
+      "description": "Dessin technique en 2D/3D",
+      "image": "https://punicaskillercenter.vercel.app/img/cert.PNG",
+      "educationalCredentialAwarded": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Certificat AutoCAD"
       }
     }
-  }
+  ]
 }
 </script>
 
