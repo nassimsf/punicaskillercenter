@@ -62,25 +62,23 @@
   "provider": {
     "@type": "EducationalOrganization",
     "name": "Punica Skills Center",
-    "sameAs": "https://www.punicaskillscenter.com"
+    "url": "https://www.punicaskillscenter.com"
   },
   "offers": {
     "@type": "Offer",
     "price": "1200",
     "priceCurrency": "TND",
-    "category": "ProfessionalEducation"  // Official Schema.org value,
+    "category": "ProfessionalEducation",
     "availability": "https://schema.org/InStock"
-   },
-    
+  },
   "hasCourseInstance": {
     "@type": "CourseInstance",
-    "courseMode": "https://schema.org/Mixed"  // Official blended learning value,
-      "courseSchedule": {
-    "@type": "Schedule",
-    "startDate": "2024-07-15",
-    "endDate": "2024-07-19",
-    ""repeatCount": 1, // Weekly (omit if one-time)
-    "byDay": "http://schema.org/Monday" // Example: "Monday,Wednesday"
+    "courseMode": "https://schema.org/Mixed",
+    "courseSchedule": {
+      "@type": "Schedule",
+      "startDate": "2024-07-15",
+      "endDate": "2024-07-19",
+      "repeatCount": 1
     },
     "location": {
       "@type": "Place",
@@ -88,7 +86,7 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tunis",
-        "addressCountry": "TN"  // Standard ISO country code
+        "addressCountry": "TN"
       }
     }
   }
