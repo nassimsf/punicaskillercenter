@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Punica Skills Center – Entreprises</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-menu a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover { color: #5f0739; }
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-btn {
+      background-color: #fff;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .dropdown-btn:hover { background-color: #720948; color: #fff; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: 600;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      color: #5f0739;
+    }
+    .dropdown-content.show { display: block; }
+
+    .top-bar {
+      width: 100%; height: 85px;
+      background-color: #fff;
+      position: fixed; top: 0; left: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #ddd;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      display: flex; align-items: center; justify-content: center;
+      padding: 10px 0;
+    }
+    .top-bar-content {
+      width: 100%; max-width: 1200px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px;
+    }
+    .logo img { max-height: 75px; width: auto; }
+    .site-header {
+      background-color: #5f0739;
+      padding: 100px 0 15px;
+      position: relative;
+    }
+    .signup-btn {
+      background-color: #5f0739 !important;
+      color: #FFF !important;
+      border-radius: 5px;
+      padding: 8px 12px;
+      text-decoration: none;
+      border: none;
+    }
+    .signup-btn:hover { background-color: #720948 !important; }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #2d1a47;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .top-bar { height: 70px; }
+      .top-bar-content { flex-direction: column; text-align: center; }
+      .logo img { max-height: 50px; }
+      .registration-container { flex-direction: column; }
+      .total-section { margin-top: 20px; }
+    }
+    .sub-checkboxes {
+      display: none;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .sub-checkboxes.show { display: block; }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .checkbox-group label {
+      display: block;
+    }
+    .sub-checkboxes label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+    .registration-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .total-section {
+      background: linear-gradient(135deg, #ffffff, #f4f4f9);
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      min-width: 200px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .total-section:hover {
+      transform: translateY(-2px);
+    }
+    .total-section h3 {
+      font-size: 1.8rem;
+      color: #2d1a47;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-family: 'PT Serif', serif;
+    }
+    .total-section p {
+      font-size: 1.4rem;
+      color: #333;
+      font-weight: 600;
+    }
+    .total-section .discount-message {
+      font-size: 1rem;
+      color: #5f0739;
+      font-style: italic;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../src/img/logo originale en couleur (1).png" alt="PSC Logo">
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <a href="../index.html#home">Accueil</a>
+          <a href="../index.html#about">À propos</a>
+          <a href="../index.html#courses">Cours</a>
+          <a href="../index.html#map-location">Localisation</a>
+        </nav>
+        <div class="dropdown">
+          <button class="dropdown-btn" onclick="toggleDropdown()" aria-expanded="false" aria-controls="vous-etes-dropdown">Inscription</button>
+          <div class="dropdown-content" id="vous-etes-dropdown">
+            <a href="particuliers.html">Pour Particuliers</a>
+            <a href="entreprise.html">Pour Entreprises</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="margin-top:160px;">
+    <section id="registration-section" class="registration section text-center" style="background-color: #ffffff; padding: 40px 0;">
+      <div class="container">
+        <h2 class="section-title mt-0">Inscription pour Entreprises</h2>
+        <p class="section-paragraph">Remplissez le formulaire ci-dessous pour inscrire vos employés à nos formations au Punica Skills Center.</p>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <div class="registration-container">
+          <form id="contact-form" 
+            action="https://script.google.com/macros/s/AKfycbzoV8ZyoNW5iNXb3ygdmAiSnvBYfvfFBUAe0BPlgJMOAHFdxJk7L_YrQyhGCVlL9LEWLQ/exec"
+            method="POST" 
+            target="hidden_iframe"
+            style="max-width: 600px; text-align: left;">
+            <input type="hidden" name="subject" value="Nouvelle Candidature Entreprise">
+            <input type="hidden" name="total_cost" id="hidden_total">
+            <input type="hidden" name="selected_courses" id="hidden_courses">
+            <div style="margin-bottom: 15px;">
+              <label for="user_name">Nom de l'entreprise :</label>
+              <input type="text" id="user_name" name="user_name" placeholder="Nom de votre entreprise" required class="form-input">
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="contact_name">Nom du contact :</label>
+              <input type="text" id="contact_name" name="contact_name" placeholder="Nom du responsable" required class="form-input">
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="user_email">Email :</label>
+              <input type="email" id="user_email" name="user_email" placeholder="Votre adresse email" required class="form-input">
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="user_phone">Numéro de téléphone :</label>
+              <input type="text" id="user_phone" name="user_phone" placeholder="Votre numéro de téléphone" required class="form-input">
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="num_participants">Nombre de participants :</label>
+              <input type="number" id="num_participants" name="num_participants" placeholder="Nombre de participants" min="1" value="1" required class="form-input">
+            </div>
+            <div class="checkbox-group">
+              <label><input type="checkbox" id="photovoltaiques" onclick="toggleSubCheckboxes('sub-checkboxes-photovoltaiques')"> Formations Photovoltaïques</label>
+            </div>
+            <div id="sub-checkboxes-photovoltaiques" class="sub-checkboxes">
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="option1" class="cost-checkbox"> Traitement dossier technique et administratif Bt et Mt 1200TND</label>
+                <label><input type="checkbox" name="option3" class="cost-checkbox"> Calcule et conception de structure PV 800TND</label>
+                <label><input type="checkbox" id="logiciels" onclick="toggleSubCheckboxes('sub-checkboxes')"> Logiciels</label>
+              </div>
+              <div style="margin-bottom: 15px;">
+                <div id="sub-checkboxes" class="sub-checkboxes">
+                  <label><input type="checkbox" name="checkbox1" class="cost-checkbox"> PV Syst 550TND</label>
+                  <label><input type="checkbox" name="checkbox2" class="cost-checkbox"> AutoCAD 650TND</label>
+                  <label><input type="checkbox" name="checkbox3" class="cost-checkbox"> Sketchup 450TND</label>
+                  <label><input type="checkbox" name="checkbox4" class="cost-checkbox"> Pack complet 1149TND + D5 render gratuit</label>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <label><input type="checkbox" id="architecture" onclick="toggleSubCheckboxes('sub-checkboxes-architecture')"> Formations Architecture</label>
+            </div>
+            <div id="sub-checkboxes-architecture" class="sub-checkboxes">
+              <div class="checkbox-group">
+                <label><input type="checkbox" id="pack1" onclick="toggleSubCheckboxes('sub-checkboxes-pack1')"> Pack 1</label>
+                <div id="sub-checkboxes-pack1" class="sub-checkboxes">
+                  <label><input type="checkbox" name="arch-checkbox1" class="cost-checkbox"> AutoCAD 650TND</label>
+                  <label><input type="checkbox" name="arch-checkbox2" class="cost-checkbox"> Sketchup 450TND</label>
+                  <label><input type="checkbox" name="arch-checkbox3" class="cost-checkbox"> Lumion 550TND</label>
+                  <label><input type="checkbox" name="arch-checkbox4" class="cost-checkbox"> Pack complet 1200TND</label>
+                </div>
+              </div>
+              <div class="checkbox-group">
+                <label><input type="checkbox" id="pack2" onclick="toggleSubCheckboxes('sub-checkboxes-pack2')"> Pack 2</label>
+                <div id="sub-checkboxes-pack2" class="sub-checkboxes">
+                  <label><input type="checkbox" name="pack2-checkbox1" class="cost-checkbox"> 3ds Max + Corona Render 650TND</label>
+                  <label><input type="checkbox" name="pack2-checkbox2" class="cost-checkbox"> Photoshop 350TND</label>
+                  <label><input type="checkbox" name="pack2-checkbox3" class="cost-checkbox"> Pack complet 800TND</label>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <label><input type="checkbox" id="genie-civil" onclick="toggleSubCheckboxes('sub-checkboxes-genie-civil')"> Formations Génie Civil</label>
+            </div>
+            <div id="sub-checkboxes-genie-civil" class="sub-checkboxes">
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="civil-checkbox1" class="cost-checkbox"> Robo Structure 800TND</label>
+                <label><input type="checkbox" name="civil-checkbox2" class="cost-checkbox"> Revit Architecture 750TND</label>
+                <label><input type="checkbox" name="civil-checkbox3" class="cost-checkbox"> Revit Structure 750TND</label>
+                <label><input type="checkbox" name="civil-checkbox4" class="cost-checkbox"> Revit Fluide 650TND</label>
+                <label><input type="checkbox" name="civil-checkbox5" class="cost-checkbox"> Revit CVC 650TND</label>
+                <label><input type="checkbox" name="civil-checkbox6" class="cost-checkbox"> Revit Elec 650TND</label>
+              </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" placeholder="Votre message ou formation souhaitée" required class="form-textarea"></textarea>
+            </div>
+            <button type="submit" class="signup-btn" style="width:100%; padding:12px; font-size:16px;">Envoyer la demande</button>
+          </form>
+          <div class="total-section">
+            <h3>Total</h3>
+            <p id="total-cost">0 TND</p>
+            <div id="selected-courses" style="text-align:left; font-size:1rem; margin-top:10px;"></div>
+            <p id="discount-message" class="discount-message" style="display: none;">Réduction de 10%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="background-color:#66033c;color:#fff;padding:20px;text-align:center;">
+    &copy; 2025 Punica Skills Center
+  </footer>
+
+<script>
+function toggleDropdown() {
+  const dropdown = document.getElementById("vous-etes-dropdown");
+  const button = document.querySelector('.dropdown-btn');
+  const isExpanded = dropdown.classList.toggle("show");
+  button.setAttribute('aria-expanded', isExpanded);
+}
+
+function toggleSubCheckboxes(id) {
+  document.getElementById(id).classList.toggle("show");
+}
+
+function updateTotal() {
+  const costs = {
+    'option1': 1200,
+    'option3': 800,
+    'checkbox1': 550,
+    'checkbox2': 650,
+    'checkbox3': 450,
+    'checkbox4': 1149,
+    'arch-checkbox1': 650,
+    'arch-checkbox2': 450,
+    'arch-checkbox3': 550,
+    'arch-checkbox4': 1200,
+    'pack2-checkbox1': 650,
+    'pack2-checkbox2': 350,
+    'pack2-checkbox3': 800,
+    'civil-checkbox1': 800,
+    'civil-checkbox2': 750,
+    'civil-checkbox3': 750,
+    'civil-checkbox4': 650,
+    'civil-checkbox5': 650,
+    'civil-checkbox6': 650
+  };
+
+  const logicielsPackComplet = document.querySelector('input[name="checkbox4"]');
+  const architecturePackComplet = document.querySelector('input[name="arch-checkbox4"]');
+  const pack2PackComplet = document.querySelector('input[name="pack2-checkbox3"]');
+
+  if (logicielsPackComplet.checked) {
+    document.querySelectorAll('input[name="checkbox1"], input[name="checkbox2"], input[name="checkbox3"]').forEach(cb => cb.checked = false);
+  }
+  if (architecturePackComplet.checked) {
+    document.querySelectorAll('input[name="arch-checkbox1"], input[name="arch-checkbox2"], input[name="arch-checkbox3"]').forEach(cb => cb.checked = false);
+  }
+  if (pack2PackComplet.checked) {
+    document.querySelectorAll('input[name="pack2-checkbox1"], input[name="pack2-checkbox2"]').forEach(cb => cb.checked = false);
+  }
+
+  const checkboxes = document.querySelectorAll('.cost-checkbox');
+  const numParticipantsInput = document.getElementById('num_participants');
+  const numParticipants = parseInt(numParticipantsInput.value) || 1;
+  let total = 0;
+  let selectedCount = 0;
+  let selectedCoursesHTML = "<strong>Formations choisies :</strong><ul>";
+
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedCount++;
+      total += costs[checkbox.name] || 0;
+      const labelText = checkbox.parentNode.textContent.trim();
+      selectedCoursesHTML += `<li>${labelText}</li>`;
+    }
+  });
+  selectedCoursesHTML += "</ul>";
+
+  const discountMessage = document.getElementById('discount-message');
+  if (selectedCount >= 2) {
+    total *= 0.9;
+    discountMessage.style.display = 'block';
+  } else {
+    discountMessage.style.display = 'none';
+  }
+
+  total *= numParticipants;
+  total *= 1.19;
+
+  document.getElementById('total-cost').textContent = `${total.toFixed(2)}TND`;
+  document.getElementById('selected-courses').innerHTML = selectedCount > 0 ? selectedCoursesHTML : '';
+  document.getElementById('hidden_total').value = `${total.toFixed(2)} TND pour ${numParticipants} participants`;
+  document.getElementById('hidden_courses').value = selectedCount > 0 ? selectedCoursesHTML.replace(/<[^>]*>/g, '') : '';
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-btn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+        document.querySelector('.dropdown-btn').setAttribute('aria-expanded', 'false');
+      }
+    }
+  }
+};
+
+const form = document.getElementById("contact-form");
+const iframe = document.getElementById("hidden_iframe");
+iframe.onload = function() {
+  if (form.dataset.submitted === "true") {
+    alert("✅ Votre demande a été enregistrée !");
+    form.reset();
+    form.dataset.submitted = "false";
+    updateTotal();
+  }
+};
+form.addEventListener("submit", function() {
+  form.dataset.submitted = "true";
+});
+
+const checkboxes = document.querySelectorAll('.cost-checkbox, #logiciels, #architecture, #photovoltaiques, #pack1, #pack2, #genie-civil');
+const numParticipantsInput = document.getElementById('num_participants');
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', updateTotal);
+});
+numParticipantsInput.addEventListener('input', updateTotal);
+
+updateTotal();
+</script>
+</body>
+</html>

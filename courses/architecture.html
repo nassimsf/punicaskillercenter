@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Architecture - Punica Skills Center</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-hNsxkrQ+T1u1afzv7VxOZKysO+NtXbKe3l4gCIZWXKp7m9ov1g3b9T3nQ9Yb8AfB+Ew5g2zFJZ5B+Zf4q5upzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-content">
+                        <div class="logo">
+                            <a href="../index.html">
+                                <img src="../src/img/logo originale en couleur (1).png" alt="PSC Logo" />
+                            </a>
+                        </div>
+                        <nav class="nav-menu">
+                            <a href="../index.html#home">Accueil</a>
+                            <a href="../index.html#about">À propos</a>
+                            <a href="../index.html#courses">Cours</a>
+                            
+                            <a href="../index.html#map-location">Localisation</a>
+                        </nav>
+                        <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">Inscription</button>
+                    <div class="dropdown-content" id="vous-etes-dropdown">
+                        <a href="../inscription/particuliers.html">Pour Particuliers</a>
+                        <a href="../inscription/entreprise.html">Pour Entreprises</a>
+                    </div>
+                    </div>
+                        <div class="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0"></h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+<script>
+    function toggleDropdown() {
+        document.getElementById("vous-etes-dropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-btn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+        <style>
+            .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-btn {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .dropdown-btn:hover {
+        background-color: #720948;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: #5f0739;
+    }
+    .dropdown-content.show {
+        display: block;
+    }
+            .top-bar {
+                width: 100%;
+                height: 85px;
+                background-color: #fff;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                border-bottom: 2px solid #ddd;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 0;
+            }
+            .top-bar-content {
+                width: 100%;
+                max-width: 1200px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+            .logo img {
+                max-height: 75px;
+                width: auto;
+            }
+            .nav-menu {
+                display: flex;
+                gap: 20px;
+            }
+            .nav-menu a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.3s;
+            }
+            .nav-menu a:hover {
+                color: #5f0739;
+            }
+            .contact-info {
+                font-size: 16px;
+                color: #333;
+                font-weight: 600;
+            }
+            .menu-toggle {
+                display: none;
+                font-size: 24px;
+                color: #333;
+                cursor: pointer;
+            }
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.7);
+                animation: fadeIn 0.3s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            .modal-content {
+                background: #fff;
+                margin: 10% auto;
+                padding: 30px;
+                border-radius: 12px;
+                width: 90%;
+                max-width: 500px;
+                position: relative;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+                animation: slideDown 0.4s ease-in-out;
+            }
+            @keyframes slideDown {
+                from { transform: translateY(-20px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            .modal-content h2 {
+                margin-top: 0;
+                font-size: 1.8rem;
+                color: #2d1a47;
+                font-family: "PT Serif", serif;
+            }
+            .modal-content form {
+                text-align: left;
+            }
+            .modal-content label {
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                color: #2d1a47;
+                margin-bottom: 8px;
+            }
+            .modal-content input, .modal-content textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            .modal-content button {
+                background: #5f0739;
+                color: #fff;
+                border-radius: 5px;
+                padding: 12px;
+                width: 100%;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s, transform 0.3s;
+            }
+            .modal-content button:hover {
+                background: #720948;
+                transform: translateY(-2px);
+            }
+            .close {
+                color: #999;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                font-size: 28px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+            .close:hover,
+            .close:focus {
+                color: #333;
+            }
+            .signup-btn {
+                background-color: #5f0739 !important;
+                color: #fff !important;
+                border-radius: 5px;
+                padding: 8px 12px;
+                text-decoration: none;
+                border: none;
+            }
+            .signup-btn:hover {
+                background-color: #720948 !important;
+            }
+            .download-btn {
+                background-color: #5f0739;
+                color: #fff;
+                border-radius: 5px;
+                padding: 12px 20px;
+                text-decoration: none;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s, transform 0.3s;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .download-btn:hover {
+                background-color: #720948;
+                transform: translateY(-2px);
+            }
+            .feature-extended-body ul li {
+                position: relative;
+                padding-left: 24px;
+                margin-bottom: 12px;
+            }
+            .feature-extended-body ul li:before {
+                content: "✔";
+                color: #5f0739;
+                position: absolute;
+                left: 0;
+                font-size: 18px;
+            }
+            @media (max-width: 768px) {
+                .top-bar {
+                    height: 70px;
+                    padding: 5px 0;
+                }
+                .top-bar-content {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 10px;
+                }
+                .nav-menu {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    width: 100%;
+                    background: #fff;
+                    padding: 20px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+                .nav-menu.active {
+                    display: flex;
+                }
+                .menu-toggle {
+                    display: block;
+                }
+                .contact-info {
+                    font-size: 12px;
+                }
+                .logo img {
+                    max-height: 50px;
+                }
+                .hero {
+                    margin-bottom: 100px !important;
+                }
+                .about {
+                    margin-top: 80px !important;
+                }
+            }
+        </style>
+
+        <main>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var contactLink = document.querySelector("a.button.button-secondary.button-shadow");
+                    var modal = document.getElementById("contactModal");
+                    var closeBtn = modal.querySelector(".close");
+                    contactLink.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        modal.style.display = "block";
+                    });
+                    closeBtn.addEventListener("click", function() {
+                        modal.style.display = "none";
+                    });
+                    window.addEventListener("click", function(event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    });
+                });
+            </script>
+            
+            <section class="promo-video" style="text-align:center; padding:60px 0; position: relative;">
+                <video 
+                    src="../src/vid/pscvoixghaith.mp4" 
+                    controls 
+                    playsinline 
+                    style="max-width: 65%; height: auto; aspect-ratio: 18 / 9; border: 4px solid #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"
+                    onloadstart="this.volume=0.3;">
+                </video>
+                <button 
+                    onclick="this.style.display='none'; this.previousElementSibling.play();" 
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #5f0739; color: white; padding: 20px; border: none; border-radius: 50%; cursor: pointer; font-size: 24px; line-height: 1; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+            </section>
+
+            <div id="registration" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Inscrivez-vous pour le cours d'Architecture</h2>
+                    <form id="modal-contact-form">
+                        <input type="hidden" name="subject" value="Inscription au cours d'Architecture">
+                        <div>
+                            <label>Nom complet :</label>
+                            <input type="text" name="user_name" placeholder="Votre nom complet" required>
+                        </div>
+                        <div>
+                            <label>Email :</label>
+                            <input type="email" name="user_email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div>
+                            <label>Numéro de téléphone :</label>
+                            <input type="text" name="user_phone" placeholder="Votre numéro de téléphone" required>
+                        </div>
+                        <div>
+                            <label>Message :</label>
+                            <textarea name="message" placeholder="Votre message ou questions sur le cours" required style="height:120px;"></textarea>
+                        </div>
+                        <button type="submit" class="signup-btn">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+
+            <section id="about" class="about section text-center" style="margin-top: 160px;">
+                <div class="container">
+                    <div class="feature-extended">
+                        <div class="feature-extended-body">
+                            <h3 class="mt-0">Cours d'Architecture</h3>
+                            <p class="section-paragraph" style="color: #333;">Développez vos compétences en conception architecturale avec notre programme intensif, conçu pour les professionnels et les étudiants. Apprenez à maîtriser des logiciels leaders comme SketchUp et AutoCAD, et appliquez vos connaissances à des projets pratiques encadrés par des experts de l'industrie.</p>
+                            <ul class="list-reset">
+                                <li>Introduction aux principes de l'architecture moderne</li>
+                                <li>Modélisation 3D avancée avec SketchUp</li>
+                                <li>Création de plans techniques précis avec AutoCAD</li>
+                                <li>Projets pratiques basés sur des scénarios réels</li>
+                                <li>Certification officielle pour valoriser votre CV</li>
+                            </ul>
+                            <a href="../pdfs/Programme de Formation Logiciels Bureautiques Pour L’architecture.pdf" download class="download-btn">Télécharger le programme de formation</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="course-price" class="course-price section text-center" style="margin-top: 40px;">
+    <div class="container">
+     
+    </div>
+</section>
+
+<style>
+    .course-price {
+        padding: 20px 0;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+    .course-price h3 {
+        font-family: "PT Serif", serif;
+        color: #2d1a47;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .course-price .section-paragraph {
+        margin: 0;
+    }
+    @media (max-width: 768px) {
+        .course-price {
+            padding: 15px 0;
+        }
+        .course-price h3 {
+            font-size: 1.5rem;
+        }
+        .course-price .section-paragraph {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+         
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+                (function(){
+                    emailjs.init("_maN-AJELgNZxtgca");
+                })();
+                function handleFormSubmit(formId, modalId) {
+                    document.getElementById(formId).addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        emailjs.sendForm("service_dmyamkr", "template_p5ixicl", this)
+                            .then(function() {
+                                alert("✅ Votre demande a été envoyée avec succès !");
+                                document.getElementById(formId).reset();
+                                if (modalId) {
+                                    document.getElementById(modalId).style.display = "none";
+                                }
+                            }, function(error) {
+                                console.error("❌ Échec de l'envoi...", error);
+                                alert("Erreur : " + JSON.stringify(error));
+                            });
+                    });
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                    handleFormSubmit("contact-form");
+                    handleFormSubmit("modal-contact-form", "registration");
+
+                    var contactLink = document.querySelector(".hero-cta .button");
+                    var modal = document.getElementById("registration");
+                    var closeBtn = modal.querySelector(".close");
+                    contactLink.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        modal.style.display = "block";
+                    });
+                    closeBtn.addEventListener("click", function() {
+                        modal.style.display = "none";
+                    });
+                    window.addEventListener("click", function(event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    });
+                    document.querySelector('.menu-toggle').addEventListener('click', function() {
+                        document.querySelector('.nav-menu').classList.toggle('active');
+                    });
+                });
+            </script>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.facebook.com/ecfjaziri" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">Facebook</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/punica_skills_center/" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">Instagram</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5zm5-2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 1 .75-.75z" fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/punicaskillscenter/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                                <span class="screen-reader-text">LinkedIn</span>
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.4 0C1.1 0 0 1.1 0 2.4v11.2C0 14.9 1.1 16 2.4 16h11.2c1.3 0 2.4-1.1 2.4-2.4V2.4C16 1.1 14.9 0 13.6 0H2.4zM4.8 13H2.4V6h2.4v7zM3.6 5.2c-.8 0-1.2-.5-1.2-1.2 0-.7.5-1.2 1.2-1.2.7 0 1.2.5 1.2 1.2 0 .7-.5 1.2-1.2 1.2zM13 13h-2.4V9.5c0-.9-.3-1.5-1.2-1.5-.6 0-1.1.4-1.3.9-.1.2-.1.4-.1.7V13H5.5V6h2.4v1.1c.4-.5 1-.8 1.8-.8 1.3 0 2.3 1 2.3 3.1V13z" fill="#f6f8fa" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <style>
+                .site-footer {
+                    background-color: #66033c;
+                }
+            </style>
+        </footer>
+
+        <script src="../dist/js/main.min.js"></script>
+    </div>
+</body>
+</html>
